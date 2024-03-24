@@ -1,0 +1,32 @@
+﻿@model CloudIceTaskOne.Models.Calc
+@{
+    ViewData["Title"] = "Index";
+}
+    
+<h2>Car Installments</h2>
+
+<form method="post">
+    
+    <div class="form-group">
+        <label asp-for="CarPrice" class="control-label"></label>
+        <input asp-for="CarPrice" class="form-control" />
+        <span asp-validation-for="CarPrice" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MonthlyPayments" class="control-label"></label>
+        <input asp-for="MonthlyPayments" class="form-control" />
+        <span asp-validation-for="MonthlyPayments" class="text-danger"></span>
+    </div>
+  
+    <button type="submit">Calculate</button>
+   
+    <div class="form-group">
+        <label asp-for="MonthInsalments" class="control-label"></label>
+        <input asp-for="MonthInsalments" class="form-control" value = "@Model.MonthInsalments" />
+        <span asp-validation-for="MonthInsalments" class="text-danger"></span>
+    </div>
+    
+</form>
+
+
